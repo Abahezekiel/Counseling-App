@@ -1,0 +1,327 @@
+       
+       
+       
+        <form action="" id="myFormm" onsubmit="return myFunction(event)">
+            <h2 id="first"></h2>
+            <!-- Name Field -->
+            <div class="form-group">
+              <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <span id="aErr" style="color: red;"></span>
+            </div>
+            
+            <!-- Age Field -->
+             <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age">
+            <span id="bErr" style="color: red;"></span>
+            <span id="minor"></span>
+            <p id="selectedTherapy"></p>
+
+
+          </div>
+
+            <!-- Phone Field -->
+            <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone">
+            <span id="cErr" style="color: red;"></span>
+            </div>
+
+            <!-- Email Field -->
+            <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <span id="dErr" style="color: red;"></span>
+
+          </div>
+            
+            <!-- Date Field -->
+            <div>
+            <label for="date">Select Date:</label>
+            <input type="date" id="date" name="date">
+            <span id="eErr" style="color: red;"></span>
+
+          </div>            
+            <!-- Time Field -->
+            <div>
+            <label for="time">Select Time:</label>
+            <input type="time" id="time" name="time">
+            <span id="fErr" style="color: red;"></span>
+
+          </div>
+            
+            <!-- Type of Counseling -->
+            <div> 
+            <label for="options">Type of Counseling:</label>
+            <select id="counsel" name="counsel">
+                <option value="" disabled selected>Select an option</option>
+                <option value="Individual">Individual</option>
+                <option value="Couples">Couples</option>
+                <option value="Family">Family</option>
+
+            </select> 
+            <span id="gErr" style="color: red;"></span>
+
+
+            <!-- Duration of Session -->
+             <br>
+            <label for="options">Duration of Session:</label>
+            <select id="Session" name="options">
+              <option value="" disabled selected>Duration of Session</option>
+              <option value="30mins">30mins</option>
+              <option value="45mins">45mins</option>
+              <option value="1hr">1hr</option>
+
+          </select>
+          <span id="hErr" style="color: red;"></span>
+          
+          <br>
+
+            <!-- Duration of Session -->
+
+            <label for="options">Available Counsellors:</label>
+            <select id="doctor" name="options">
+              <option value="" disabled selected>Available Counsellors</option>
+              <option value="Dr. Nas">Dr. Nas</option>
+              <option value="Dr. Esther">Dr. Esther</option>
+              <option value="Dr. Ahmad">Dr. Ahmad</option>
+
+          </select>
+          <span id="iErr" style="color: red;"></span>
+
+            </div>
+            <button type="button"   id="sub">Submit</button>
+                <p id="summary"></p>
+
+
+
+            <!-- <div class="modal " id="todoModal " >
+              <div class="modal-content" >
+                <div class="modal-header">
+                  <h2 id="modalTitle">Add Todo</h2>
+                  <span class="modal-close  " id="modalClose" >&times;</span>
+                </div>
+                <form id="todoForm">
+                  <label for="todoTitle">Title:</label>
+                  <input type="text" id="todoTitle" name="title" required /> <br>
+                  <label for="todoText">Description:</label>
+                  <textarea
+                    id="todoText"
+                    name="description"
+                    rows="4"
+                    required
+                  ></textarea> <br>
+                  <button type="submit">Add Todo</button>
+                </form>
+              </div>
+            </div> -->
+          
+        </form>
+
+
+
+
+
+
+        let f1 = document.getElementById('name');
+let f2 = document.getElementById('age')
+let f3 = document.getElementById('phone');
+let f4 = document.getElementById('email');
+let f5 = document.getElementById('date');
+let f6 = document.getElementById('time')
+let f7 = document.getElementById('counsel');
+let f8 = document.getElementById('Session');
+let f9 = document.getElementById('doctor');
+
+
+
+// let date = ["monday", "tuesday", "wednesday,", "thursday", "friday", "saturday", "sunday"]
+    
+// let time = ["9am", "11am", "1pm"]
+
+// let counsel = ["Individual", "Couples", "Family", "E.T.C"]
+    
+// let session = ["30mins", "45mins", "1hr"]
+
+// let doctor = ["Dr. Nas", "Dr. Esther", "Dr. Ahmad"]
+
+
+function myFunction(event) {
+  event.preventDefault(); 
+    let name = document.getElementById('name').value;
+    let age = document.getElementById('age').value;
+    let phone = document.getElementById('phone').value;
+    let email = document.getElementById('email').value;
+    let date = document.getElementById('date').value;
+    let time = document.getElementById('time').value;
+    let counsel = document.getElementById('counsel').value;
+    let session = document.getElementById('Session').value;
+    let doctor = document.getElementById('doctor').value;
+
+
+   
+    
+// let summary = document.getElementById('summary');
+
+
+    
+
+    
+    // let userDate = name.toLowerCase(); 
+    // let userTime = f6.value.toLowerCase(); 
+    // let userCounsel = f7.value.toLowerCase(); 
+    // let userSession = f8.value.toLowerCase();
+    // let userDoctor = f9.value;
+    // let userName = f1.value.toLowerCase();
+
+    // let avalaibleDate = date.includes(userDate);
+    // let avalaibleTime = time.includes(userTime);
+    // let avalaibleCounsel = counsel.includes(userCounsel);
+    // let avalaibleSession = session.includes(userSession);
+    // let avalaibleDoctor = doctor.includes(userDoctor);
+
+
+  
+    let valid = true
+    let aErr = document.getElementById('aErr');
+    let bErr = document.getElementById('bErr');
+    let cErr = document.getElementById('cErr');
+    let dErr = document.getElementById('dErr');
+    let eErr = document.getElementById('eErr');
+    let fErr = document.getElementById('fErr');
+    let gErr = document.getElementById('gErr');
+    let hErr = document.getElementById('hErr');
+    let iErr = document.getElementById('iErr');
+    let minorMessage = document.getElementById('minor');
+
+    if (name === ""){
+      aErr.innerHTML = "field can't be left empty"
+      valid = false
+      // console.log(valid)
+    } else {
+      aErr.innerHTML = ""
+      // console.log(valid)
+    }
+    if (age === ""){
+      bErr.innerHTML = "field can't be left empty"
+      valid = false
+      // console.log(valid)
+    } else {
+      bErr.innerHTML = ""
+      // console.log(valid)
+    }
+    if (phone  === ""){
+      cErr.innerHTML = "field can't be left empty"
+      valid = false
+      // console.log(valid)
+
+    } else {
+      cErr.innerHTML = ""
+      // console.log(valid)
+    }
+    if (email  === ""){
+      dErr.innerHTML = "field can't be left empty"
+      valid = false
+      // console.log(valid)
+
+    } else {
+      dErr.innerHTML = ""
+      // console.log(valid)
+    }
+
+    // if (age < 18) {
+    //   selectedTherapy.innerHTML = "You are underaged!";
+    //  } else {
+    //   selectedTherapy.innerHTML = "";
+    //  }
+
+
+     if (date  === ""){
+      eErr.innerHTML = "field can't be left empty"
+      valid = false
+      console.log(valid)
+
+    } else {
+      eErr.innerHTML = ""
+      console.log(valid)
+    }
+
+    if (time  === ""){
+      fErr.innerHTML = "field can't be left empty"
+      valid = false
+      console.log(valid)
+
+    
+    } else {
+      fErr.innerHTML = ""
+      console.log(valid)
+    }
+
+    if (counsel  === ""){
+      gErr.innerHTML = "field can't be left empty"
+      valid = false
+      console.log(valid)
+
+    }     else {
+      gErr.innerHTML = ""
+      console.log(valid)
+    }
+
+    if (session  === ""){
+      hErr.textContent = "field can't be left empty"
+      valid = false
+      console.log(valid)
+
+    } else {
+      hErr.textContent = ""
+      console.log(valid)
+    }
+    if (doctor  === ""){
+      iErr.innerHTML = "field can't be left empty"
+      valid = false
+      console.log(valid)
+
+    } else {
+      iErr.innerHTML = ""
+      console.log(valid)
+    }
+    if(!valid){
+      console.log("form not submited")
+      return false; 
+    }
+
+
+    let nowSlots = {
+      "Dr. Ahmad": ["09:00", "12:30"],
+        "Dr. Esther": ["11:00", "14:30"],
+        "Dr. Nas": ["10:30", "08:30"]
+    
+    }
+
+   
+
+
+    if (!nowSlots[doctor].includes(time)){
+      summary.innerHTML = `Sorry  ${name}, no slots available for  ${session} with ${doctor} Please choose another session and Doctor`;
+    
+    }
+    else{
+      summary.innerHTML = `thank you  ${name}, for booking ${date}, ${time}, ${counsel}, ${session} and ${doctor}! Please proceed to payment.`;
+    
+    }
+    return true; 
+  }
+
+  // document.querySelector(".submit").addEventListener("click", () => {
+  //   document.getElementById("sub").style.display = "block";
+  //   });
+
+
+// document.getElementById("modalClose").addEventListener("click", () => {
+// document.getElementById("todoModal").style.display = "none";
+
+// });
+// let client = ["Individual", "Couples", "Family", "E.T.C"]
+// let duration = ["30mins", "45mins", "1hr"]
+// let therapist = ["Dr. Nas", "Dr. Esther", "Dr. Ahmad"]

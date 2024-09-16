@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="queries.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="top-bar">
+        <span>BOOK A FREE FIFTEEN MINUTE TELEPHONE CONSULTATION NOW!</span>
+        <a href="tel:08034180514" class="call-now">Call Now! 08034180514</a>
+      </div>
+
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="#">SERVICES</a></li>
+          <li><a href="#">OUR CLINICS</a></li>
+          <li>
+            <a href="#"><button class="btn1">Ease Your Mind</button></a>
+          </li>
+          <li><a href="#">ABOUT US</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+          <li><a href="#">BLOG</a></li>
+        </ul>
+        <div class="nav-links show flex">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </div>
+      </nav>
+      <div class="book">
+        <a href="form.html">BOOK A SESSION</a>
+      </div>
+    </header>
+    <div class="form-container">
+      <h2>Counseling Center</h2>
+
+      <form id="myFormm" onsubmit="return myFunction(event)">
+        <h2 id="first"></h2>
+        <!-- Name Field -->
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" />
+          <span id="aErr" style="color: red"></span>
+        </div>
+
+        <!-- Age Field -->
+        <div class="form-group">
+          <label for="age">Age:</label>
+          <input type="number" id="age" name="age" />
+          <span id="bErr" style="color: red"></span>
+          <span id="minor"></span>
+          <p id="selectedTherapy"></p>
+        </div>
+
+        <!-- Phone Field -->
+        <div class="form-group">
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" />
+          <span id="cErr" style="color: red"></span>
+        </div>
+
+        <!-- Email Field -->
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" />
+          <span id="dErr" style="color: red"></span>
+        </div>
+
+        <!-- Date Field -->
+        <div class="form-group">
+          <label for="date">Select Date:</label>
+          <input type="date" id="date" name="date" />
+          <span id="eErr" style="color: red"></span>
+        </div>
+
+        <!-- Time Field -->
+        <div class="form-group">
+          <label for="time">Select Time:</label>
+          <input type="time" id="time" name="time" />
+          <span id="fErr" style="color: red"></span>
+        </div>
+
+        <!-- Type of Counseling -->
+        <div class="form-group">
+          <label for="options">Type of Counseling:</label>
+          <select id="counsel" name="counsel">
+            <option value="" disabled selected>Select an option</option>
+            <option value="Individual">Individual</option>
+            <option value="Couples">Couples</option>
+            <option value="Family">Family</option>
+          </select>
+          <span id="gErr" style="color: red"></span>
+        </div>
+
+        <!-- Duration of Session -->
+        <br />
+        <div class="form-group">
+          <label for="options">Duration of Session:</label>
+          <select id="Session" name="Session">
+            <option value="" disabled selected>Duration of Session</option>
+            <option value="30mins">30mins</option>
+            <option value="45mins">45mins</option>
+            <option value="1hr">1hr</option>
+          </select>
+          <span id="hErr" style="color: red"></span>
+        </div>
+        <br />
+
+        <!-- Available Counsellors -->
+        <div class="form-group">
+          <label for="options">Available Counsellors:</label>
+          <select id="doctor" name="doctor">
+            <option value="" disabled selected>Available Counsellors</option>
+            <option value="Dr. Nas">Dr. Nas</option>
+            <option value="Dr. Esther">Dr. Esther</option>
+            <option value="Dr. Ahmad">Dr. Ahmad</option>
+          </select>
+          <span id="iErr" style="color: red"></span>
+        </div>
+        <br />
+        <div class="form-group">
+          <button type="submit" id="sub">Submit</button>
+        </div>
+        <p id="summary"></p>
+      </form>
+    </div>
+
+    <!-- footer  -->
+    <footer>
+      <div class="footer">
+        <div class="col1">
+          <img src="images/Screen Shot 2024-09-10 at 5.43.43 AM.png" alt="" />
+        </div>
+        <div class="col1">
+          <li>
+            <a href="#"><b>NAVIGATE</b></a>
+          </li>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Blog</a></li>
+        </div>
+        <div class="col1">
+          <li>
+            <a href="#"><b>OUR CLINICS</b></a>
+          </li>
+          <li><a href="#">Beverly Hills Clinic</a></li>
+          <li><a href="#">Toronto Clinic</a></li>
+          <li><a href="#">FCT Abuja</a></li>
+        </div>
+        <div class="col1">
+          <li>
+            <a href="#"><b>CONNECT</b></a>
+          </li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Book Consultation </a></li>
+          <li><a href="#"> </a></li>
+          <li><a href="#"> </a></li>
+        </div>
+        <div class="col2">
+          <li>
+            <a href="#"><b>EASE YOUR MIND</b></a>
+          </li>
+          <li><a href="#">Eazy House</a></li>
+          <li><a href="#">107a, Edmonton Road,</a></li>
+          <li><a href="#">Beverly Hills</a></li>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
