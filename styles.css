@@ -171,7 +171,7 @@ button:hover {
 }
 .footer {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
+  /* grid-template-columns: 1fr 1fr 1fr 1fr 2fr; */
   background-color: #5A6868;
   height: 300px;
   /* gap: 1px; */
@@ -278,7 +278,7 @@ button:hover {
 
 .welcome {
   padding: 0 100px;
-  height: 500px;
+  height: 50%;
   /* width: 100%; */
   background-color: #f6f6f6;
   /* display: flex; */
@@ -296,7 +296,7 @@ button:hover {
   width: 50%;
 }
 .wel-text {
-  background-color: white;
+  background-color: rebeccapurple;
   height: 500px;
   width: 50%;
   justify-content: center;
