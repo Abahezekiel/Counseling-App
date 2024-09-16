@@ -151,6 +151,7 @@
     padding: 15px 80px;
     width: 140px;
     font-size: 10px;
+    margin-left: 50px;
     /* background-color: blue; */
   }
   .help1 h1 {
@@ -193,6 +194,8 @@
   }
   .blogs {
     padding: 0 !important;
+    margin-left: 90px;
+
     width: 100% !important;
     display: grid;
     grid-template-rows: 1fr;
@@ -269,6 +272,8 @@
     gap: 50px;
     display: grid;
     grid-template-rows: 1fr;
+    margin-left: 50px;
+
   }
   .therapy {
     height: 200px;
